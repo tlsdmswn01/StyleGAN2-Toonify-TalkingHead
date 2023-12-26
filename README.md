@@ -1,7 +1,13 @@
 # MyTalkCon-with-StlyeGAN-Toonify-TalkingHead
 
+
 ## 목차
--   
+- [프로젝트 소개](#프로젝트소개)
+- [아이디어 제안 배경](#)
+- [아이디어 소개](#PROJECT-설명)  
+- [아이디어 구현과정](#about-model)
+- [향후계획](#Dataset)
+- [Reference](#Reference) 
 
 ## 프로젝트 개요
 <div align="left">
@@ -314,10 +320,18 @@
 </p>
 
 ## 팀원 소개 및 역할 분담  
- <p align='left'>
- <img width="100%" src="https://github.com/tlsdmswn01/NLP_Project---Audio/blob/main/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20PPT/%ED%8C%80%EC%9B%90%20%EC%86%8C%EA%B0%9C%20%EB%B0%8F%20%EC%97%AD%ED%95%A0%EB%B6%84%EB%8B%B4.png?raw=true"/>  
-  </div>
-</p>
+*알파코 7기 1조* 
+
+|구성원|깃허브 주소|분담 역할|
+|:---:|:--:|:--:|
+|고예진|[Git](https://github.com/ayun3738)|프로젝트 일정 관리, MIT fine-tuning, 데이터 전처리, <br> Web Ux 구현|
+|신은주|[Git](https://github.com/doh0106)|TTS Modeling(Jests-based), 데이터 전처리, Poly-Encoder train, <br> aws 환경 구축, Web Ux 구현|
+|이선주|[Git](https://github.com/Kihoon9498)|MIT fine-tuning, 데이터 전처리, whisper pipeline, <br> aws 환경 구축, Web UI, Ux 구현, 웹 서비스 배포|
+|이정호|[GIt](https://github.com/suted2)|W2L fine-tuning, Rad-NeRF fine-tuning 데이터 전처리, <br> TOXIC pipeline, TTS 데이터 생성, Web Ux 구현|
+
+</br>  
+
+---
 
 ## 기대 및 자체평가 의견  
 
@@ -325,4 +339,15 @@
  <img width="100%" src="https://github.com/tlsdmswn01/NLP_Project---Audio/blob/main/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%20PPT/%EA%B8%B0%EB%8C%80%20%EB%B0%8F%20%EC%9E%90%EC%B2%B4%ED%8F%89%EA%B0%80%EC%9D%98%EA%B2%AC.png?raw=true"/>  
   </div>
 </p>
+
+
+## Enviroment
+
+| Env |CPU | GPU | RAM | OS 
+|:--:|:--:|:--:|:--:|:--:|
+| Local |i5- 13500k | RTX-3070Ti | 32G| Window11 |
+| AWS |  AMD-EPYC-7R32 | RTX-3090| 12G| Ubuntu |
+| kaggle | intel Xeon | P100 | 12G | Ubuntu | 
+| Colab + | intel Xeon | A100 | 80G | Ubuntu |
+
 
