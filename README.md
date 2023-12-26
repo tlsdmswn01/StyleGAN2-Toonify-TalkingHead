@@ -1,7 +1,7 @@
 # MyTalkCon-with-StlyeGAN-Toonify-TalkingHead
 
 ## 목차
-- 
+-   
 
 ## 프로젝트 개요
 <div align="left">
