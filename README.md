@@ -14,12 +14,12 @@
             </tr>
             <tr>
               <th>프로젝트 목표</th>
-              <td>수어 인식이 가능한 챗봇 서비스의 개발을 통한 청각장애인의 의료격차 해소</td>
+              <td>사용자가 원하는 그림체와 자신 얼굴, 음성을 반영한 소리이모티콘 생성 서비스 제공</td>
             </tr>
             <tr>
               <th>프로젝트 내용</th>
-              <td>▪ 수어인식 모델 개발 간 GRB 비디오 입력과 keypoint 입력 시의 성능 비교<br>
-                  ▪ 챗봇 개발 간 RAG(Retrieval-augmented generation, 검색 증강 생성) 기술의 적용을 통한 답변의 정확성, 신뢰성 향상</td>
+              <td>▪ StyleGAN2, Toonify를 통해 실사 이미지를 이모티콘화<br>
+                  ▪ Talking Head를 통한 말하는 나만의 이모티콘 생성</td>
             </tr>
             <tr>
               <th>개발환경 <br> (클라우드)</th>
@@ -77,7 +77,10 @@
                 <br>
                 <li>아이디어 제안배경</li>
                 <br>
-                <li>데이터 수집</li>
+                <li>데이터</li>
+                <ul class="data-ul">
+                    <li><a href="#dataselect">데이터 수집</a></li>
+                </ul>
                 <br>
                 <li>아이디어 구현 과정 </li>
                 <br>
@@ -113,6 +116,7 @@
                         </ul>
                 </ul
                 <br>
+                <br>
                 <li>추후 개선 방향</li>
             </ol>
         </div>
@@ -145,13 +149,13 @@
 </p>
 
 
---- 
 
 # 📃아이디어 제안 배경
 - 이모티콘 소비 특징 :
 - 개인화 캐릭터 생성 인기 :
   
  ## 페르소나 - 유저 활용기대
+ - ppt 만들어지면 넣기
  
  ## 유사 서비스와의 차별점
 - 유사 서비스 차별점 ppt 이미지 넣기
@@ -246,7 +250,7 @@
             <img src="./src/images/SSLRV2_mediapipe.png" alt="">
             <li>레퍼런스: <em>"Preprocessing for Keypoint-Based Sign Language Translation without Glosses"(Kim & Baek, 2023)</em></li>
             <br>
-            <h3 id="strategy03">데이터 정제</h3>
+            <h3 id="strategy03">성능개선 전략 03: 데이터 정제</h3>
             <p>하단의 레퍼런스에서 제안한 Customized Normalization 기법을 보유 데이터셋에 적합하게 일부 수정하여 코드 구현 및 적용.</p>
             <img src="./src/images/SSLRV2_mediapipe.png" alt="">
             <li>레퍼런스: <em>"Preprocessing for Keypoint-Based Sign Language Translation without Glosses"(Kim & Baek, 2023)</em></li>
@@ -257,13 +261,66 @@
             <br>
             <h2 id="stylegan"> 🖼️ 그림체 입히기 : Toonify</h2>
             <h3 id="stylegan">Toonify 진행과정</h3>
+            - PPT 이미지 넣기
             <img src="./src/images/SSLRV2_ablation_study.png" alt="SSLRV2_ablation_study.png">
             <h3 id="stylegan">2개 Blended Model 비교</h3>
             <h3 id="stylegan">데이터 정제 - Face Alignment</h3>
             <br>
             <h2 id="stylegan"> 🗣️ Talking Head </h2>
             <h3 id="stylegan">SadTalker</h3>
-            <h3 id="stylegan">Make It Talk</h3>
+            <table class="sadtalker-table">
+                <tr>
+                    <td width="300"><img src="./src/images/SSLRV1_full.png" height="300" alt="SSLRV1_full.png"></td>
+                    <td>
+                        <ol>
+                            <li>모델 선정 이유</li>
+                            <ul>
+                                <li>수어는 연속된 동작이므로, 행동을 인식하고 분류하는 문제로 파악</li>
+                                <li>RGB 비디오를 학습하여 각 동작에 대한 일반화 기대</li>
+                            </ul>
+                            <br>
+                            <li>아키텍쳐 특징</li>
+                            <ul>
+                                <li>사전학습된 DenseNet-121을 통해 각 프레임 내 특징 추출</li>
+                                <li>Transformer-Encoder 구조로, 프레임 간 전후맥락을 고려한 학습 의도</li>
+                            </ul>
+                            <br>
+                            <li>참고 자료</li>
+                            <ul>
+                                <li><em>"Beyond Short Snippets: Deep Networks for Video Classification"(Ng et al., 2015)</em></li>
+                                <li><em>"Attention Is All You Need" (Vaswani, A., et al., 2017)</em></li>
+                            </ul>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
+            <h3 id="stylegan">Make It Talk</h3>  
+              <table class="MakeItTalk-table">
+                <tr>
+                    <td width="300"><img src="./src/images/SSLRV1_full.png" height="300" alt="SSLRV1_full.png"></td>
+                    <td>
+                        <ol>
+                            <li>모델 선정 이유</li>
+                            <ul>
+                                <li>수어는 연속된 동작이므로, 행동을 인식하고 분류하는 문제로 파악</li>
+                                <li>RGB 비디오를 학습하여 각 동작에 대한 일반화 기대</li>
+                            </ul>
+                            <br>
+                            <li>아키텍쳐 특징</li>
+                            <ul>
+                                <li>사전학습된 DenseNet-121을 통해 각 프레임 내 특징 추출</li>
+                                <li>Transformer-Encoder 구조로, 프레임 간 전후맥락을 고려한 학습 의도</li>
+                            </ul>
+                            <br>
+                            <li>참고 자료</li>
+                            <ul>
+                                <li><em>"Beyond Short Snippets: Deep Networks for Video Classification"(Ng et al., 2015)</em></li>
+                                <li><em>"Attention Is All You Need" (Vaswani, A., et al., 2017)</em></li>
+                            </ul>
+                        </ol>
+                    </td>
+                </tr>
+            </table>
             <h3 id="stylegan">데이터 정제 - Semantic Segmentation</h3>
         </div>
         <br>
