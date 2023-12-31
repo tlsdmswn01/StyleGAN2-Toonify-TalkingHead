@@ -124,7 +124,7 @@
 
  
  <div id="service-section">
-            <h1>서비스</h1>
+            <h1>⭐ 서비스</h1>
             <h2 id="testing">활용 예시</h2>
             <img src="./src/images/service_testing.gif" height="400">
             <br>
@@ -161,7 +161,7 @@
 - 유사 서비스 차별점 ppt 이미지 넣기
 
  <div id="data-section">
-            <h1>데이터</h1>
+            <h1>💿 데이터</h1>
             <h2 id="data-section">데이터 수집</h2>
             <p>AI Hub - "수어 영상" 데이터셋에서 단어 영상 및 라벨 데이터 취득.</p>
             <ul>
@@ -264,6 +264,12 @@
             - PPT 이미지 넣기
             <img src="./src/images/SSLRV2_ablation_study.png" alt="SSLRV2_ablation_study.png">
             <h3 id="stylegan">2개 Blended Model 비교</h3>
+            <p>AI Hub - "수어 영상" 데이터셋에서 단어 영상 및 라벨 데이터 취득.</p>
+            <ul>
+                <li>EDA를 통해 전체 의료 용어 5,485건, 일상어 12,317건을 선별.</li>
+                <li>데이터셋에서 제시하는 기준에 맞춰 Train 및 Validation 데이터 구분.</li>
+                <li>제공된 Train과 Validation 데이터의 유사성이 높다고 판단하여, Test 데이터는 별도로 촬영하여 소량 수집하였음.</li>
+            </ul>
             <h3 id="stylegan">데이터 정제 - Face Alignment</h3>
             <br>
             <h2 id="stylegan"> 🗣️ Talking Head </h2>
