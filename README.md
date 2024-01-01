@@ -8,7 +8,7 @@
             <tr>
               <th>인원구성</th>
               <td><a href="https://github.com/Leo-Moooon">고예진</a> 
-                  <a href="https://github.com/okteam13">신은주</a> 
+                  <a href="https://github.com/tlsdmswn01">신은주</a> 
                   <a href="https://github.com/xxonyuk">이선주</a>
                   <a href="https://github.com/xxonyuk">이정호</a></td>
             </tr>
@@ -201,29 +201,29 @@
             </table>
             <br>
             <h3>StyleGAN 한계점</h3>
-            <li>물방울 같은 노이즈 발생 - AdaIN의 정규화로 발생하는 문제/li>
+            <li>물방울 같은 노이즈 발생 - AdaIN의 정규화로 발생하는 문제</li>
             <li>일부 피쳐들이 얼굴의 움직임을 따르지 않는 문제 - Progressive growing으로 발생하는 문제</li>
             <br>
             <h3 id="stylegan2">StyleGAN2</h3>
             <table class="stylegan2-table">
                 <tr>
-                    <td width="300"><img src="./src/images/SSLRV2_full.png" height="300" alt="SSLRV2_full.png"></td>                    <td>
+                    <td width="400"><img src="https://github.com/tlsdmswn01/StlyeGAN2-Toonify-TalkingHead/assets/135305102/c1a44bda-0045-410d-a84c-443e9352abb8" height="300" alt="SSLRV2_full.png"></td>                    <td>
                         <ol>
                             <li>모델 선정 이유</li>
                             <ul>
-                                <li>위 StyleGAN의 문제점들을 개선한 모</li>
+                                <li>위 StyleGAN의 개선모델</li>
+                                <li>AdaIN 대신 CNN의 가중치 정규화로 물방울 제거</li>
+                                <li>Progressive Growing을 제거해 눈과 이의 부자연스러운 문제 개선</li>
                                 <li>StyleGAN보다 더 자연스러운 이미지를 생성하며, PPL과 같은 정량적 평가 지표에서 성능이 더 좋음을 확인</li>
                             </ul>
                             <br>
                             <li>아키텍쳐 특징</li>
                             <ul>
-                                <li><strong>특징 추출기 변경</strong>
                                     <ol>
-                                        <li>RGB 비디오에서 신체 Keypoint 데이터 추출</li>
-                                        <li>별도의 정규화 (Customized Normalization) 진행</li>
+                                        <li>AdaIN 같은 실제 통계로 정규화 하는 대신, 추정통계로 정규화</li>
+                                        <li>Progressive Growing 대신 skip connection을 갖고 있는 계층 생성자를 사용</li>                                        <li>이미지 품질을 위해 PPL을 줄이고 잠재 공간을 매끄럽게 개선</li>
                                     </ol>
                                 </li>
-                                <li>BERT의 구조를 차용하되, 각 block 사이에 Batch Normalization 레이어 추가</li>
                             </ul>
                             <br>
                             <li>참고 자료</li>
