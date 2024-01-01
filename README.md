@@ -1,5 +1,5 @@
 # MyTalkCon-with-StlyeGAN-Toonify-TalkingHead
- <h2>프로젝트 개요</h2>
+<h2>프로젝트 개요</h2>
         <table class="summary">
             <tr>
               <th>기간</th>
@@ -251,26 +251,29 @@
             <li>레퍼런스: <em>"Preprocessing for Keypoint-Based Sign Language Translation without Glosses"(Kim & Baek, 2023)</em></li>
             <br>
             <h3 id="strategy03">성능개선 전략 03: 데이터 정제</h3>
-            <p>하단의 레퍼런스에서 제안한 Customized Normalization 기법을 보유 데이터셋에 적합하게 일부 수정하여 코드 구현 및 적용.</p>
-            <img src="./src/images/SSLRV2_mediapipe.png" alt="">
-            <li>레퍼런스: <em>"Preprocessing for Keypoint-Based Sign Language Translation without Glosses"(Kim & Baek, 2023)</em></li>
+            <li>기존 데이터 셋에는 그림체가 통일되어 있지 않거나 채도가 낮은 이미지가 섞여 있었음. 따라서 데이터 정제를 진행함과 동시에 추가적인 데이터를 수집함</em></li>
             <br>
-            <h3 id="strategy-result">성능 개선 후 최종 이미지 생성결과</h3>
-            <img src="./src/images/SSLRV2_ablation_study.png" alt="SSLRV2_ablation_study.png">
-            <p>Input data를 Keypoint로 변경하고, Customized-Normalization까지 적용하였을 때 가장 높은 성능이 나왔음.</p>
+            <img src="https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/c43cb7d9-14e3-4dca-9866-48930a5b1572" width="1280" height="520" />
             <br>
+            <h3 id="strategy-result">정성평가(그림체, 채도 통일, 데이터 수 증가)</h3>
+            <br>
+            <img src="https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/407a5e62-25cd-4971-a2a3-7f8a725f5bc5" width="1280" height="520" />
+            <p>-> 기존 발생했던 문제점들은 없어졌지만 생성된 이미지 가운데 그림체가 깨지는 현상이 발생함. 문제의 원인이 배경에 있다고 판단하여 배경을 제거하고 학습을 진행하였음. </p>
+            <h3 id="strategy-result">정성평가(배경 제거)</h3>
+            <img src="https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/13a23d25-b058-4fea-bf95-4a1ec3f5ede4" width="1280" height="520" />
+            <p>기존 문제점들이 개선 된 것을 확인할 수 있음 </p>
             <h2 id="stylegan"> 🖼️ 그림체 입히기 : Toonify</h2>
             <h3 id="stylegan">Toonify 진행과정</h3>
-            - PPT 이미지 넣기
-            <img src="./src/images/SSLRV2_ablation_study.png" alt="SSLRV2_ablation_study.png">
+            <img src="https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/44cacd06-bbe5-4210-aaec-dcdbe5fa2525" width="1280" height="520" />
             <h3 id="stylegan">2개 Blended Model 비교</h3>
-            <p>AI Hub - "수어 영상" 데이터셋에서 단어 영상 및 라벨 데이터 취득.</p>
-            <ul>
-                <li>EDA를 통해 전체 의료 용어 5,485건, 일상어 12,317건을 선별.</li>
-                <li>데이터셋에서 제시하는 기준에 맞춰 Train 및 Validation 데이터 구분.</li>
-                <li>제공된 Train과 Validation 데이터의 유사성이 높다고 판단하여, Test 데이터는 별도로 촬영하여 소량 수집하였음.</li>
-            </ul>
-            <h3 id="stylegan">데이터 정제 - Face Alignment</h3>
+            <div>
+            <img src="https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/cf6cc014-cf7b-41c9-a48e-a31fdee9e544" height="520" />
+            <img src="https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/eb6dbdc5-eea2-4e0f-8813-c38801145014" height="520" />
+            </div>
+            <h3 id="stylegan">Face Alignment</h3>
+            <img src="https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/9422eaed-6302-4e0f-8294-25eb5291d56a" width="1280" height="520" />
+            <h3 id="stylegan">실제 이미지에 적용</h3>
+            <img src="https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/9624c0b1-b07d-4bac-a865-0db4e8e7e8ba" width="1280" height="520" />
             <br>
             <h2 id="stylegan"> 🗣️ Talking Head </h2>
             <h3 id="stylegan">SadTalker</h3>
