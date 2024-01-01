@@ -1,7 +1,5 @@
 # MyTalkCon-with-StlyeGAN-Toonify-TalkingHead
-<img src="https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/6b6426f8-1ace-40a0-bf45-1b4452609cf6" width="200" height="200" />
-![38](https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/6b6426f8-1ace-40a0-bf45-1b4452609cf6)
- <h2>프로젝트 개요</h2>
+<h2>프로젝트 개요</h2>
         <table class="summary">
             <tr>
               <th>기간</th>
@@ -254,9 +252,11 @@
             <br>
             <h3 id="strategy03">성능개선 전략 03: 데이터 정제</h3>
             <li>기존 데이터 셋에는 그림체가 통일되어 있지 않거나 채도가 낮은 이미지가 섞여 있었음. 따라서 데이터 정제를 진행함과 동시에 추가적인 데이터를 수집함</em></li>
+            <br>
             <img src="https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/c43cb7d9-14e3-4dca-9866-48930a5b1572" width="1280" height="520" />
             <br>
             <h3 id="strategy-result">정성평가(그림체, 채도 통일, 데이터 수 증가)</h3>
+            <br>
             <img src="https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/407a5e62-25cd-4971-a2a3-7f8a725f5bc5" width="1280" height="520" />
             <p>-> 기존 발생했던 문제점들은 없어졌지만 생성된 이미지 가운데 그림체가 깨지는 현상이 발생함. 문제의 원인이 배경에 있다고 판단하여 배경을 제거하고 학습을 진행하였음. </p>
             <h3 id="strategy-result">정성평가(배경 제거)</h3>
