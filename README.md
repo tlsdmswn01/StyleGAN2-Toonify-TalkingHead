@@ -251,7 +251,7 @@
             <li>레퍼런스: <em>"Preprocessing for Keypoint-Based Sign Language Translation without Glosses"(Kim & Baek, 2023)</em></li>
             <br>
             <h3 id="strategy03">성능개선 전략 03: 데이터 정제</h3>
-            <p>하단의 레퍼런스에서 제안한 Customized Normalization 기법을 보유 데이터셋에 적합하게 일부 수정하여 코드 구현 및 적용.</p>
+            <p>기존 원본 데이터에는 그림체가 섞여 있었음</p>
             <img src="./src/images/SSLRV2_mediapipe.png" alt="">
             <li>레퍼런스: <em>"Preprocessing for Keypoint-Based Sign Language Translation without Glosses"(Kim & Baek, 2023)</em></li>
             <br>
