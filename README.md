@@ -203,11 +203,16 @@
             <h3>StyleGAN 한계점</h3>
             <li>물방울 같은 노이즈 발생 - AdaIN의 정규화로 발생하는 문제</li>
             <li>일부 피쳐들이 얼굴의 움직임을 따르지 않는 문제 - Progressive growing으로 발생하는 문제</li>
+             -<br>
+         <div align='left'>
+                 <img width='49%' src="https://github.com/tlsdmswn01/StlyeGAN2-Toonify-TalkingHead/assets/135305102/8c180285-0901-4016-90c5-b036a23fc6b2" height=250>
+                 <img width='50%' src="https://github.com/tlsdmswn01/StlyeGAN2-Toonify-TalkingHead/assets/135305102/c689c88b-a61f-4156-a467-824106766333" height=250>
+         </div>
             <br>
             <h3 id="stylegan2">StyleGAN2</h3>
             <table class="stylegan2-table">
                 <tr>
-                    <td width="400"><img src="https://github.com/tlsdmswn01/StlyeGAN2-Toonify-TalkingHead/assets/135305102/c1a44bda-0045-410d-a84c-443e9352abb8" height="300" alt="SSLRV2_full.png"></td>                    <td>
+                    <td width="400"><img src="https://github.com/tlsdmswn01/StlyeGAN2-Toonify-TalkingHead/assets/135305102/c1a44bda-0045-410d-a84c-443e9352abb8" height="330" alt="SSLRV2_full.png"></td>                    <td>
                         <ol>
                             <li>모델 선정 이유</li>
                             <ul>
@@ -236,13 +241,22 @@
             </table>
             <br>
             <h3 id="strategy01">성능개선 전략 01: FreezeD</h3>
-            <p>Discriminator의 전반부 - 특징 추출기 부분을 동렬하여 오버피팅 조절 및 빠르고 안정적인 학습 진행</p>
-            <img src="https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/135305102/05b74e54-c6aa-4e51-a4f0-f56eb3950b65" >
+            <p>FreezeD 논문을 통해 GAN 훈련이 오버피팅에 취약하다는 사실을 알게 되었고, 논문에서 제안한 FreezeD를 통해 개선하고자 함</p>
+            <p>Discriminator의 전반부 - 특징 추출기를 동렬해 오버피팅을 조절하고 안정적으로 학습 진행</p>
+         <div align='center'>
+            <img width='80%' src="https://github.com/tlsdmswn01/StlyeGAN2-Toonify-TalkingHead/assets/135305102/c46133df-3b4c-4f0f-a627-51ab4f341003" >
+         </div>
             <br>
-            <h3 id="strategy02">성능개선 전략 02: ADA</h3>
-            <p>하단의 레퍼런스에서 제안한 Customized Normalization 기법을 보유 데이터셋에 적합하게 일부 수정하여 코드 구현 및 적용.</p>
-            <img src="./src/images/SSLRV2_mediapipe.png" alt="">
-            <li>레퍼런스: <em>"Preprocessing for Keypoint-Based Sign Language Translation without Glosses"(Kim & Baek, 2023)</em></li>
+                     <li>레퍼런스: <em>"SANGWOO MO, 「FREEZE THE DISCRIMINATOR: A SIMPLE BASELINE FOR FINE-TUNING GANS」, 2020, 1P."</em></li>
+            <h3 id="strategy02">성능개선 전략 02: ADA (데이터 증강 기법)</h3>
+            <p>하단 논문을 통해 이미지 데이터 셋 부족은 Discriminator 오버피팅을 야기해 Generator에게 주는 피드백이 무의미해지면서 결국 Generator도 학습을 제대로 하지 못한다는 사실을 알게 되었다.</p>
+        <div align='center'>
+            <img width='90%' src="https://github.com/tlsdmswn01/StlyeGAN2-Toonify-TalkingHead/assets/135305102/d9946c63-4953-4602-9da7-74cf25d33003" alt="">
+        </div>
+         <br>
+         - 논문에 따르면 FreezeD+2만 데이터 셋에서 과적합이 일어난 반면, FreezeD+ADA+5천 데이터셋에 대해서는 과적합이 일어나지 않았다. 당시 우리 데이터는 절대적으로 부족했기에 ADA를 필수적으로 적용할 필요성이 있었다.
+            <br>   
+         <li>레퍼런스: <em>"출처: TERO KERRAS, 「TRAINING GENERATIVE ADVERSARIAL NETWORKS WITH LIMITED DATA」, 2020"</em></li>
             <br>
             <h3 id="strategy03">성능개선 전략 03: 데이터 정제</h3>
             <li>기존 데이터 셋에는 그림체가 통일되어 있지 않거나 채도가 낮은 이미지가 섞여 있었음. 따라서 데이터 정제를 진행함과 동시에 추가적인 데이터를 수집함</em></li>
@@ -346,29 +360,21 @@
  </tr>
 
  <tr>
-  <td align='center'><img src="https://avatars.githubusercontent.com/u/87919319?v=4" width="50" height="50"></td>
-  <td align='center'>SeongWoo Park</td>
+  <td align='center'><img src="https://avatars.githubusercontent.com/u/135305102?v=4" width="50" height="50"></td>
+  <td align='center'>신은주</td>
   <td align='center'>Modeling / Dashboard</td>
-  <td align='center'><a href="https://github.com/ssongssong00"><img src="http://img.shields.io/badge/ssongssong00-green?style=social&logo=github"/></a></td>
-  <td align='center'><a href="mailto:seongwoo1205@gmail.com"><img src="https://img.shields.io/badge/seongwoo1205@gmail.com-green?logo=gmail&style=social"/></a></td>
+  <td align='center'><a href="https://github.com/tlsdmswn01"><img src="http://img.shields.io/badge/tlsdmswn01-green?style=social&logo=github"/></a></td>
+  <td align='center'><a href="mailto:sinssinej7@ajou.ac.kr"><img src="https://img.shields.io/badge/sinssinej7@ajou.ac.kr-green?logo=gmail&style=social"/></a></td>
  </tr>
  
  <tr>
-  <td align='center'><img src="https://avatars.githubusercontent.com/u/96776691?v=4" width="50" height="50"></td>
-  <td align='center'>CheonHa Kim</td>
+  <td align='center'><img src="https://avatars.githubusercontent.com/u/135305102?v=4" width="50" height="50"></td>
+  <td align='center'>신은주</td>
   <td align='center'>Modeling / Dashboard</td>
-  <td align='center'><a href="https://github.com/KimUnderTheSky"><img src="http://img.shields.io/badge/KimUnderTheSky-green?style=social&logo=github"/></a></td>
-  <td align='center'><a href="mailto:cjsksla@ajou.ac.kr"><img src="https://img.shields.io/badge/cjsksla@ajou.ac.kr-green?logo=gmail&style=social"/></a></td>
+  <td align='center'><a href="https://github.com/tlsdmswn01"><img src="http://img.shields.io/badge/tlsdmswn01-green?style=social&logo=github"/></a></td>
+  <td align='center'><a href="mailto:sinssinej7@ajou.ac.kr"><img src="https://img.shields.io/badge/sinssinej7@ajou.ac.kr-green?logo=gmail&style=social"/></a></td>
  </tr>
  
- <tr>
-  <td align='center'><img src="https://avatars.githubusercontent.com/u/100076851?v=4" width="50" height="50"></td>
-  <td align='center'>조국</td>
-  <td align='center'>Modeling / Dashboard</td>
-  <td align='center'><a href="https://github.com/nikey20006"><img src="http://img.shields.io/badge/nikey20006-green?style=social&logo=github"/></a></td>
-  <td align='center'><a href="mailto:nikey2000@ajou.ac.kr"><img src="https://img.shields.io/badge/nikey2000@ajou.ac.kr-green?logo=gmail&style=social"/></a></td>
- </tr>
-
  <tr>
   <td align='center'><img src="https://avatars.githubusercontent.com/u/135305102?v=4" width="50" height="50"></td>
   <td align='center'>신은주</td>
@@ -378,11 +384,19 @@
  </tr>
 
  <tr>
-  <td align='center'><img src="https://avatars.githubusercontent.com/u/135504764?v=4" width="50" height="50"></td>
-  <td align='center'>이다은</td>
+  <td align='center'><img src="https://avatars.githubusercontent.com/u/135305102?v=4" width="50" height="50"></td>
+  <td align='center'>신은주</td>
+  <td align='center'>아이디어 기획, StyleGAN2+Fine-tuning, Toonify</td>
+  <td align='center'><a href="https://github.com/tlsdmswn01"><img src="http://img.shields.io/badge/tlsdmswn01-green?style=social&logo=github"/></a></td>
+  <td align='center'><a href="mailto:sinssinej7@ajou.ac.kr"><img src="https://img.shields.io/badge/sinssinej7@ajou.ac.kr-green?logo=gmail&style=social"/></a></td>
+ </tr>
+
+ <tr>
+  <td align='center'><img src="https://avatars.githubusercontent.com/u/135305102?v=4" width="50" height="50"></td>
+  <td align='center'>신은주</td>
   <td align='center'>Modeling / Dashboard</td>
-  <td align='center'><a href="https://github.com/leeddany"><img src="http://img.shields.io/badge/leeddany-green?style=social&logo=github"/></a></td>
-  <td align='center'><a href="mailto:kkkshd@ajou.ac.kr"><img src="https://img.shields.io/badge/kkkshd@ajou.ac.kr-green?logo=gmail&style=social"/></a></td>
+  <td align='center'><a href="https://github.com/tlsdmswn01"><img src="http://img.shields.io/badge/tlsdmswn01-green?style=social&logo=github"/></a></td>
+  <td align='center'><a href="mailto:sinssinej7@ajou.ac.kr"><img src="https://img.shields.io/badge/sinssinej7@ajou.ac.kr-green?logo=gmail&style=social"/></a></td>
  </tr>
 </table>
 </br>  
