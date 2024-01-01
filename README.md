@@ -252,6 +252,7 @@
             <br>
             <h3 id="strategy03">성능개선 전략 03: 데이터 정제</h3>
             <p>기존 데이터 셋에는 그림체가 통일되어 있지 않거나 채도가 낮은 이미지가 섞여 있었음. 따라서 데이터 정제의 필요성을 느낌</p>
+            <img src="(https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/6b6426f8-1ace-40a0-bf45-1b4452609cf6/38.PNG"  width="500" height="370">
   ![38](https://github.com/tlsdmswn01/MyTalkCon-with-StlyeGAN-Toonify-TalkingHead/assets/140469725/6b6426f8-1ace-40a0-bf45-1b4452609cf6)
             <br>
             <h3 id="strategy-result">성능 개선 후 최종 이미지 생성결과</h3>
