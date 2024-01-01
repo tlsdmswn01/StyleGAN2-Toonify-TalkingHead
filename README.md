@@ -332,17 +332,59 @@
 </p>
 
 
+## 🕋팀 정보 (Team Information)
 
-## 팀원 소개 및 역할 분담  
-*알파코 7기 1조* 
+안녕하십니까, 저희는 영앤리츠팀입니다. 
 
-|구성원|깃허브 주소|분담 역할|
-|:---:|:--:|:--:|
-|고예진|[Git](https://github.com/ayun3738)|프로젝트 일정 관리, MIT fine-tuning, 데이터 전처리, <br> Web Ux 구현|
-|신은주|[Git](https://github.com/doh0106)|TTS Modeling(Jests-based), 데이터 전처리, Poly-Encoder train, <br> aws 환경 구축, Web Ux 구현|
-|이선주|[Git](https://github.com/Kihoon9498)|MIT fine-tuning, 데이터 전처리, whisper pipeline, <br> aws 환경 구축, Web UI, Ux 구현, 웹 서비스 배포|
-|이정호|[GIt](https://github.com/suted2)|W2L fine-tuning, Rad-NeRF fine-tuning 데이터 전처리, <br> TOXIC pipeline, TTS 데이터 생성, Web Ux 구현|
+<table>
+ <tr>
+  <td></td>
+  <td>Name</td>
+  <td>Role</td>
+  <td>github</td>
+  <td>e-mail</td>
+ </tr>
 
+ <tr>
+  <td align='center'><img src="https://avatars.githubusercontent.com/u/87919319?v=4" width="50" height="50"></td>
+  <td align='center'>SeongWoo Park</td>
+  <td align='center'>Modeling / Dashboard</td>
+  <td align='center'><a href="https://github.com/ssongssong00"><img src="http://img.shields.io/badge/ssongssong00-green?style=social&logo=github"/></a></td>
+  <td align='center'><a href="mailto:seongwoo1205@gmail.com"><img src="https://img.shields.io/badge/seongwoo1205@gmail.com-green?logo=gmail&style=social"/></a></td>
+ </tr>
+ 
+ <tr>
+  <td align='center'><img src="https://avatars.githubusercontent.com/u/96776691?v=4" width="50" height="50"></td>
+  <td align='center'>CheonHa Kim</td>
+  <td align='center'>Modeling / Dashboard</td>
+  <td align='center'><a href="https://github.com/KimUnderTheSky"><img src="http://img.shields.io/badge/KimUnderTheSky-green?style=social&logo=github"/></a></td>
+  <td align='center'><a href="mailto:cjsksla@ajou.ac.kr"><img src="https://img.shields.io/badge/cjsksla@ajou.ac.kr-green?logo=gmail&style=social"/></a></td>
+ </tr>
+ 
+ <tr>
+  <td align='center'><img src="https://avatars.githubusercontent.com/u/100076851?v=4" width="50" height="50"></td>
+  <td align='center'>조국</td>
+  <td align='center'>Modeling / Dashboard</td>
+  <td align='center'><a href="https://github.com/nikey20006"><img src="http://img.shields.io/badge/nikey20006-green?style=social&logo=github"/></a></td>
+  <td align='center'><a href="mailto:nikey2000@ajou.ac.kr"><img src="https://img.shields.io/badge/nikey2000@ajou.ac.kr-green?logo=gmail&style=social"/></a></td>
+ </tr>
+
+ <tr>
+  <td align='center'><img src="https://avatars.githubusercontent.com/u/135305102?v=4" width="50" height="50"></td>
+  <td align='center'>신은주</td>
+  <td align='center'>Modeling / Dashboard</td>
+  <td align='center'><a href="https://github.com/tlsdmswn01"><img src="http://img.shields.io/badge/tlsdmswn01-green?style=social&logo=github"/></a></td>
+  <td align='center'><a href="mailto:sinssinej7@ajou.ac.kr"><img src="https://img.shields.io/badge/sinssinej7@ajou.ac.kr-green?logo=gmail&style=social"/></a></td>
+ </tr>
+
+ <tr>
+  <td align='center'><img src="https://avatars.githubusercontent.com/u/135504764?v=4" width="50" height="50"></td>
+  <td align='center'>이다은</td>
+  <td align='center'>Modeling / Dashboard</td>
+  <td align='center'><a href="https://github.com/leeddany"><img src="http://img.shields.io/badge/leeddany-green?style=social&logo=github"/></a></td>
+  <td align='center'><a href="mailto:kkkshd@ajou.ac.kr"><img src="https://img.shields.io/badge/kkkshd@ajou.ac.kr-green?logo=gmail&style=social"/></a></td>
+ </tr>
+</table>
 </br>  
 
 
