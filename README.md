@@ -252,8 +252,6 @@
             <br>
             <h3 id="strategy03">성능개선 전략 03: 데이터 정제</h3>
             <p>기존 데이터 셋에는 그림체가 통일되어 있지 않거나 채도가 낮은 이미지가 섞여 있었음. 따라서 데이터 정제의 필요성을 느낌</p>
-            <img src="./src/images/SSLRV2_mediapipe.png" alt="">
-            <li>레퍼런스: <em>"Preprocessing for Keypoint-Based Sign Language Translation without Glosses"(Kim & Baek, 2023)</em></li>
             <br>
             <h3 id="strategy-result">성능 개선 후 최종 이미지 생성결과</h3>
             <img src="./src/images/SSLRV2_ablation_study.png" alt="SSLRV2_ablation_study.png">
