@@ -293,20 +293,19 @@
                         <ol>
                             <li>모델 선정 이유</li>
                             <ul>
-                                <li>수어는 연속된 동작이므로, 행동을 인식하고 분류하는 문제로 파악</li>
-                                <li>RGB 비디오를 학습하여 각 동작에 대한 일반화 기대</li>
+                                <li>한 장의 이미지와 오디오로 자연스럽게 말하는 영상을 만들기 위함</li>
+                                <li>3D Motion Field를 기반으로 자연스러운 움직임을 생성함</li>
                             </ul>
                             <br>
                             <li>아키텍쳐 특징</li>
                             <ul>
-                                <li>사전학습된 DenseNet-121을 통해 각 프레임 내 특징 추출</li>
-                                <li>Transformer-Encoder 구조로, 프레임 간 전후맥락을 고려한 학습 의도</li>
+                                <li>원본 이미지에서 계수를 추출한 다음 ExpNet과 PoseVAE에 의해 현실적인 3DMM 모션 계수 개별적으로 생성</li>
+                                <li>말하는 머리 동영상을 제작하기 위해 3D-aware 얼굴 렌더링을 사용</li>
                             </ul>
                             <br>
                             <li>참고 자료</li>
                             <ul>
-                                <li><em>"Beyond Short Snippets: Deep Networks for Video Classification"(Ng et al., 2015)</em></li>
-                                <li><em>"Attention Is All You Need" (Vaswani, A., et al., 2017)</em></li>
+                                <li><em>""SadTalker: Learning Realistic 3D Motion Coefficients for Stylized Audio-Driven Single Image Talking Face Animation"(Ng et al., 2022)</em></li>
                             </ul>
                         </ol>
                     </td>
@@ -320,20 +319,19 @@
                         <ol>
                             <li>모델 선정 이유</li>
                             <ul>
-                                <li>수어는 연속된 동작이므로, 행동을 인식하고 분류하는 문제로 파악</li>
-                                <li>RGB 비디오를 학습하여 각 동작에 대한 일반화 기대</li>
+                                <li>SadTalker와 마찬가지로 한 장의 이미지와 오디오로 말하는 영상 생성</li>
+                                <li>SadTalker에서는 탐지하지 못하는 Face Landmark를 MakeItTalk에서는 탐지할 수 있음</li>
                             </ul>
                             <br>
                             <li>아키텍쳐 특징</li>
                             <ul>
-                                <li>사전학습된 DenseNet-121을 통해 각 프레임 내 특징 추출</li>
-                                <li>Transformer-Encoder 구조로, 프레임 간 전후맥락을 고려한 학습 의도</li>
+                                <li>이미지에서 Landmark 추출하고 오디오는 Content, Speaker Identity Embedding으로 분리 진행</li>
+                                <li>LSTM, MLP, Self-attention Encoder를 활용하여 움직임을 예측</li>
                             </ul>
                             <br>
                             <li>참고 자료</li>
                             <ul>
-                                <li><em>"Beyond Short Snippets: Deep Networks for Video Classification"(Ng et al., 2015)</em></li>
-                                <li><em>"Attention Is All You Need" (Vaswani, A., et al., 2017)</em></li>
+                                <li><em>"MakeItTalk: Speaker-Aware Talking-Head Animation"(Ng et al., 2020)</em></li>
                             </ul>
                         </ol>
                     </td>
