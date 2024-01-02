@@ -1,4 +1,4 @@
-# MyTalkCon-with-StlyeGAN-Toonify-TalkingHead
+# MyTalkCon-with-StyleGAN-Toonify-TalkingHead
 <h2>프로젝트 개요</h2>
         <table class="summary">
             <tr>
