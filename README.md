@@ -288,7 +288,7 @@
             <h3 id="stylegan">SadTalker</h3>
             <table class="sadtalker-table">
                 <tr>
-                    <td width="300"><img src="./src/images/SSLRV1_full.png" height="300" alt="SSLRV1_full.png"></td>
+                    <td width="300"><img src="https://github.com/tlsdmswn01/StyleGAN2-Toonify-TalkingHead/assets/121289391/b22a9188-b0f0-44ba-8d4e-d8a32810a0ae"></td>
                     <td>
                         <ol>
                             <li>모델 선정 이유</li>
@@ -315,7 +315,7 @@
             <h3 id="stylegan">Make It Talk</h3>  
               <table class="MakeItTalk-table">
                 <tr>
-                    <td width="300"><img src="./src/images/SSLRV1_full.png" height="300" alt="SSLRV1_full.png"></td>
+                    <td width="300"><img src="https://github.com/tlsdmswn01/StyleGAN2-Toonify-TalkingHead/assets/121289391/91d05dda-ffe5-408f-9195-794d409cf37d" height="300" alt="SSLRV1_full.png"></td>
                     <td>
                         <ol>
                             <li>모델 선정 이유</li>
