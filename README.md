@@ -154,7 +154,7 @@
 - 유사 서비스: 미모티콘, 네이버 툰 필터
 <br>
   <div align='center'>
-  <img width='70%' src="https://github.com/tlsdmswn01/StlyeGAN2-Toonify-TalkingHead/assets/135305102/5234ffc0-303f-4c76-885a-9f59051a626f" width="1280" height="450" />
+  <img width='80%' src="https://github.com/tlsdmswn01/StlyeGAN2-Toonify-TalkingHead/assets/135305102/5234ffc0-303f-4c76-885a-9f59051a626f" width="2000" height="450" />
 </div>
  <div id="data-section">
             <h1>💿 데이터</h1>
